@@ -4,7 +4,7 @@ this assignment seemed straightforward so i planned out the different functions 
 
 
 #### Libraries i used , 
-![[Pasted image 20250410194104.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/libs.png)
 
 ttk is treeView module of tkinter it helps in making tables ; pandas for reading csv files , math for writing formulas and webbrowser for opening the broswer when "ReadMe" or "Linkedin" Button is pressed.
 
@@ -12,18 +12,18 @@ ttk is treeView module of tkinter it helps in making tables ; pandas for reading
 
 
 
-![[Pasted image 20250410194802.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/defining_var.png)
 defining variables
 
 
 
-![[Pasted image 20250410195849.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/load_data.png)
 loading data from the csv files with pandas and initialising the participant and events dictionary.
 
 
 
 
-![[Pasted image 20250410195949.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/bias.png)
 expected_performance -  calculates the expected number of problems solved for a given rating and event difficulty using the given formula.
 
 generate_problems_solved - randomly generated the actual problems solved with bias to rating of the participant . I used choices method of the random library to put on bias.
@@ -37,33 +37,38 @@ taking inspiration from machine learning , i remembered how optimizers technique
 
 
 
-![[Pasted image 20250410200922.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/pura_update.png)
 
-![[Pasted image 20250410201005.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/uncer.png)
 define the error delta as the difference between actual and expected. We define a learning rate and a momentum coefficient which scales the velocity . 
 
 Uncertainity_factor stays 1 for participants who have completed 3 or more events and stays 2.2 if less. this helps newer players to gain more rating significantly faster.
 
 
-![[Pasted image 20250410201241.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/velocity.png)
 
 First we add a velocity parameter to the participants data , it keeps track of rate of change of rating of the participant.
 
 
-![[Pasted image 20250410201344.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/yt_ss.png)
+
 https://www.youtube.com/watch?v=NE88eqLngkg
 
 Here the for the change of rating i have taken a factor of learning_rate - to scale values
 
 Velocity is calculated by the formula shown in the video , gradient is taken as the delta and uncertainity factor is also multiplied.
 
-![[Pasted image 20250410202341.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/decay.png)
 
 
 The Decay formula is fairly simple - if a partcipant misses >=2 events consecutively they get a decay of decay_amount for every consecutive missed event.
 
 
-![[Pasted image 20250410202436.png]]
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/update_leaderboard.png)
 updating the leaderboard - sorting the enteries after each event and updating the entries in table . 
 
 I have explained the code for tkinter window in the comments itself, take a look.
+
+
+
+![ss](https://github.com/samarthbanodia/WNCC-ASSIGNMENT-Q1/blob/main/window_record.gif)
